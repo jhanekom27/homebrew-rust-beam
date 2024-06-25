@@ -11,6 +11,7 @@ MACOS_CHECKSUM=$(cat ../${BINARY_NAME}-${VERSION}-macos.sha256/${BINARY_NAME}-${
 
 # Path to the formula file
 FORMULA_FILE="Formula/${BINARY_NAME}.rb"
+echo "Updating formula file: ${FORMULA_FILE}"
 
 # Update the version
 sed -i '' "s/version \".*\"/version \"${VERSION}\"/g" ${FORMULA_FILE}

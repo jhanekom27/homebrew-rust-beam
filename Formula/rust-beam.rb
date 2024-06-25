@@ -4,7 +4,7 @@
 class RustBeam < Formula
   desc "My simple file transfer thing written in Rust"
   homepage "https://github.com/jhanekom27/rust-beam"
-  version "0.0.30"
+  version "10"
 
   if OS.mac?
     url "macurl"
