@@ -6,8 +6,8 @@ VERSION=$1
 BINARY_NAME=$2
 
 # Paths to the checksums
-LINUX_CHECKSUM=$(cat ../${BINARY_NAME}-${VERSION}-linux.sha256 | awk '{ print $1 }')
-MACOS_CHECKSUM=$(cat ../${BINARY_NAME}-${VERSION}-macos.sha256 | awk '{ print $1 }')
+LINUX_CHECKSUM=$(cat ../${BINARY_NAME}-${VERSION}-linux.sha256/${BINARY_NAME}-${VERSION}-linux.sha256 | awk '{ print $1 }')
+MACOS_CHECKSUM=$(cat ../${BINARY_NAME}-${VERSION}-macos.sha256/${BINARY_NAME}-${VERSION}-macos.sha256 | awk '{ print $1 }')
 
 # Path to the formula file
 FORMULA_FILE="Formula/${BINARY_NAME}.rb"
