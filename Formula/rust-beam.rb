@@ -8,10 +8,10 @@ class RustBeam < Formula
 
   if OS.mac?
     url "https://github.com/user/repo/releases/download/vv0.0.32/rust-beam-v0.0.32-macos.tar.gz"
-    sha256 "6508f9650478a54db810e7d2f536de3ab9e95bcc9f5d8f67f14d7d1727a88a6d"
+    sha256 "6508f9650478a54db810e7d2f536de3ab9e95bcc9f5d8f67f14d7d1727a88a6d" # macos
   elsif OS.linux?
     url "https://github.com/user/repo/releases/download/vv0.0.32/rust-beam-v0.0.32-linux.tar.gz"
-    sha256 "7817562e7a2248e594d0209dd3301fd561f987a49267a947136c4bc8a5721893"
+    sha256 "7817562e7a2248e594d0209dd3301fd561f987a49267a947136c4bc8a5721893" # linux
   end
 
   def install

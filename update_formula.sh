@@ -26,8 +26,9 @@ sed -i "s/version \".*\"/version \"${VERSION}\"/g" "${FORMULA_FILE}"
 
 # Update the macOS URL and checksum
 sed -i "s|url \".*macos.*\"|url \"https://github.com/user/repo/releases/download/v${VERSION}/${BINARY_NAME}-${VERSION}-macos.tar.gz\"|g" "${FORMULA_FILE}"
-sed -i "s|sha256 \".*MACOS.*\"|sha256 \"${MACOS_CHECKSUM}\"|g" "${FORMULA_FILE}"
+sed -i "s|sha256 \".*\" # macos|sha256 \"${MACOS_CHECKSUM}\" # macos|g" "${FORMULA_FILE}"
 
 # Update the Linux URL and checksum
 sed -i "s|url \".*linux.*\"|url \"https://github.com/user/repo/releases/download/v${VERSION}/${BINARY_NAME}-${VERSION}-linux.tar.gz\"|g" "${FORMULA_FILE}"
-sed -i "s|sha256 \".*LINUX.*\"|sha256 \"${LINUX_CHECKSUM}\"|g" "${FORMULA_FILE}"
+sed -i "s|sha256 \".*\" # linux|sha256 \"${LINUX_CHECKSUM}\" # linux|g" "${FORMULA_FILE}"
+
