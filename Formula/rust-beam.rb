@@ -4,14 +4,14 @@
 class RustBeam < Formula
   desc "My simple file transfer thing written in Rust"
   homepage "https://github.com/jhanekom27/rust-beam"
-  version "10"
+  version "formula-update"
 
   if OS.mac?
     url "macurl"
-    sha256 "MACOS_SHA256_CHECKSUM"
+    sha256 ""
   elsif OS.linux?
-    url "https://github.com/user/repo/releases/download/v1.0.0/rust-beam-1.0.0-linux.tar.gz"
-    sha256 "LINUX_SHA256_CHECKSUM"
+    url "https://github.com/user/repo/releases/download/vformula-update/rust-beam-formula-update-linux.tar.gz"
+    sha256 ""
   end
 
   def install

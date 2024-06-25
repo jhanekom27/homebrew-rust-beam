@@ -8,10 +8,18 @@ BINARY_NAME=$2
 # Paths to the checksums
 LINUX_CHECKSUM=$(cat ../${BINARY_NAME}-${VERSION}-linux.sha256/${BINARY_NAME}-${VERSION}-linux.sha256 | awk '{ print $1 }')
 MACOS_CHECKSUM=$(cat ../${BINARY_NAME}-${VERSION}-macos.sha256/${BINARY_NAME}-${VERSION}-macos.sha256 | awk '{ print $1 }')
+echo "Linux checksum: ${LINUX_CHECKSUM}"
+echo "macOS checksum: ${MACOS_CHECKSUM}"
 
 # Path to the formula file
 FORMULA_FILE="Formula/${BINARY_NAME}.rb"
 echo "Updating formula file: ${FORMULA_FILE}"
+
+# Check if the formula file exists
+if [ ! -f "${FORMULA_FILE}" ]; then
+  echo "Error: Formula file ${FORMULA_FILE} does not exist."
+  exit 1
+fi
 
 # Update the version
 sed -i '' "s/version \".*\"/version \"${VERSION}\"/g" ${FORMULA_FILE}
