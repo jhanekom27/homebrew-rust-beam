@@ -7,7 +7,7 @@ class RustBeam < Formula
   version "v0.0.31"
 
   if OS.mac?
-    url "macurl"
+    url "macos"
     sha256 "6508f9650478a54db810e7d2f536de3ab9e95bcc9f5d8f67f14d7d1727a88a6d"
   elsif OS.linux?
     url "https://github.com/user/repo/releases/download/vv0.0.31/rust-beam-v0.0.31-linux.tar.gz"
