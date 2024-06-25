@@ -4,14 +4,14 @@
 class RustBeam < Formula
   desc "My simple file transfer thing written in Rust"
   homepage "https://github.com/jhanekom27/rust-beam"
-  version "v0.0.32"
+  version "v0.0.33"
 
   if OS.mac?
-    url "https://github.com/user/repo/releases/download/vv0.0.32/rust-beam-v0.0.32-macos.tar.gz"
-    sha256 "6508f9650478a54db810e7d2f536de3ab9e95bcc9f5d8f67f14d7d1727a88a6d" # macos
+    url "https://github.com/user/repo/releases/download/vv0.0.33/rust-beam-v0.0.33-macos.tar.gz"
+    sha256 "b1f1627c5c76ae84923f6a67208f60138e8d81db7de54e3a5f1878e8f8b6e4f8" # macos
   elsif OS.linux?
-    url "https://github.com/user/repo/releases/download/vv0.0.32/rust-beam-v0.0.32-linux.tar.gz"
-    sha256 "7817562e7a2248e594d0209dd3301fd561f987a49267a947136c4bc8a5721893" # linux
+    url "https://github.com/user/repo/releases/download/vv0.0.33/rust-beam-v0.0.33-linux.tar.gz"
+    sha256 "534d4f3f3ff2d18e125ea986f1552f4413ed5a64d08fb49190be34ac5005f705" # linux
   end
 
   def install
