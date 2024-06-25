@@ -2,13 +2,23 @@
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class RustBeam < Formula
-    desc "My simple file transfer thing written in Rust"
-    homepage "https://github.com/jhanekom27/rust-beam"
-    url "https://github.com/jhanekom27/rust-beam/releases/latest/download/rust-beam-mac.tar.gz"
-    sha256 "2ddcae12d409ad05289bc623a545c8ffb8e3fa650502ec015c11ac11e62ffce2"
-    version "0.0.2"
-  
-    def install
-      bin.install "rust-beam"
-    end
+  desc "My simple file transfer thing written in Rust"
+  homepage "https://github.com/jhanekom27/rust-beam"
+  version "0.0.30"
+
+  if OS.mac?
+    url "macurl"
+    sha256 "MACOS_SHA256_CHECKSUM"
+  elsif OS.linux?
+    url "https://github.com/user/repo/releases/download/v1.0.0/rust-beam-1.0.0-linux.tar.gz"
+    sha256 "LINUX_SHA256_CHECKSUM"
+  end
+
+  def install
+    bin.install "rust-beam"
+  end
+
+  test do
+    system "#{bin}/rust-beam", "--version"
+  end
 end
